@@ -14,7 +14,7 @@ class webmap3_api_geocoding
 {
 	var $_multibyte_class ;
 
-	var $_BASE_URL = 'http://maps.googleapis.com/maps/api/geocode/json?sensor=false';
+	var $_BASE_URL = 'https://maps.googleapis.com/maps/api/geocode/json?sensor=false';
 
 	var $_search_address  = '';
 	var $_language = '';

@@ -26,7 +26,7 @@ define("_C_WEBMAP3_CFG_LATITUDE", "35.443924694026" ) ;
 define("_C_WEBMAP3_CFG_LONGITUDE", "139.63738918304" ) ;
 define("_C_WEBMAP3_CFG_ZOOM", "10" ) ;
 define("_C_WEBMAP3_CFG_LOC_MARKER_INFO", '<b>Example</b><br/><a href="http://www.city.yokohama.lg.jp/en/" target="_blank"><img src="http://www.city.yokohama.lg.jp/bunka/outline/brand/open-yokohama.jpg" width="70" border="0" /><br />Yokohama City Office</a>' ) ;
-define("_C_WEBMAP3_CFG_GEO_URL", "http://api.flickr.com/services/feeds/geo/?id=8645522@N06&format=rss_200" ) ;
+define("_C_WEBMAP3_CFG_GEO_URL", "https://api.flickr.com/services/feeds/geo/?id=8645522@N06&format=rss_200" ) ;
 define("_C_WEBMAP3_CFG_GEO_TITLE", "Flickr : ken.ohwada" ) ;
 define("_C_WEBMAP3_CFG_GICON_FSIZE", "102400" ) ;	// 100 KB
 define("_C_WEBMAP3_CFG_GICON_WIDTH", "50" ) ;	// 50 pixel

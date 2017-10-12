@@ -110,7 +110,7 @@ function build_gmap_api( $langcode=null )
 		$langcode = _LANGCODE ;
 	}
 
-	$src = 'http://maps.google.com/maps/api/js?sensor=false&amp;language='. $langcode  ;
+	$src = 'https://maps.google.com/maps/api/js?sensor=false&amp;language='. $langcode  ;
 	$str = '<script src="'. $src .'" type="text/javascript" charset="utf-8"></script>'."\n";
 	return $str;
 }
