@@ -35,6 +35,7 @@ function webmap3_api_geocoding( $dirname )
 	$config_class =& webmap3_inc_config::getSingleton( $dirname );
 	$this->_language = $config_class->get_by_name( 'language' );
 	$this->_region   = $config_class->get_by_name( 'region' );
+	$this->_api_key  = $config_class->get_by_name( 'api_key' );
 }
 
 public static function &getSingleton( $dirname )
@@ -52,6 +53,7 @@ public static function &getSingleton( $dirname )
 function build_url()
 {
 	$url  = $this->_BASE_URL;
+	$url .= '&key='.$this->_api_key;
 	$url .= '&region='.$this->_region;
 	$url .= '&language='.$this->_language;
 	$url .= '&address='. $this->to_utf8_rawurlencode( $this->_search_address );
@@ -77,6 +79,9 @@ function fetch()
 	$status = $json->status;
 	if ( $status != 'OK' ) {
 		$this->_error = 'status: '.$status;
+		if ($json->error_message) {
+			$this->_error .= '<br/>' . $json->error_message;
+		}
 		return false;
 	}
 

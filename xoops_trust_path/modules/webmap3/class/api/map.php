@@ -30,6 +30,7 @@ class webmap3_api_map
 // config
 	var $_REGION_DEFAULT = '';
 	var $_region         = '';
+	var $_api_key        = '';
 
 // center
 	var $_latitude  = 0;
@@ -122,6 +123,7 @@ function webmap3_api_map( $dirname )
 
 	$config_class =& webmap3_inc_config::getSingleton( $dirname );
 	$this->_REGION_DEFAULT = $config_class->get_by_name( 'region' );
+	$this->_api_key = $config_class->get_by_name( 'api_key' );
 }
 
 public static function &getSingleton( $dirname )
@@ -424,6 +426,7 @@ function build_param_common( $flag_header=true )
 		'webmap3_dirname'    => $this->_WEBMAP3_DIRNAME ,
 		'webmap3_marker_url' => $this->_MARKER_URL ,
 		'dirname'            => $this->_dirname ,
+		'webmap3_api_key'    => $this->_api_key ,
 
 // center
 		'latitude'                   => $this->_latitude ,
@@ -547,7 +550,7 @@ function sanitize( $str )
 //---------------------------------------------------------
 function assign_google_map_js_to_head( $flag_header=true )
 {
-	return $this->_header_class->assign_or_get_google_map_js( $flag_header ) ;
+	return $this->_header_class->assign_or_get_google_map_js( $flag_header, $this->_api_key ) ;
 }
 
 function assign_map_js_to_head( $flag_header=true )

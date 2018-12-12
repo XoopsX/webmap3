@@ -73,6 +73,16 @@ function build_config()
 	$arr = array();
 
 	$arr[] = array(
+		'name'			=> 'api_key' ,
+		'title'			=> $this->lang_name( 'CFG_MAP_API_KEY' ) ,
+		'description'	=> $this->lang_name( 'CFG_MAP_API_KEY_DSC' ) ,
+		'formtype'		=> 'text' ,
+		'valuetype'		=> 'string' ,
+		'default'		=> '' ,
+		'options'		=> array() 
+	) ;
+
+	$arr[] = array(
 		'name'			=> 'map_type_control' ,
 		'title'			=> $this->lang_name( 'CFG_MAP_TYPE_CONTROL' ) ,
 		'description'	=> $this->lang_name( 'CFG_MAP_TYPE_CONTROL_DSC' ) ,

@@ -57,14 +57,14 @@ function assign_or_get_default_css( $flag_header=true )
 	return array( $show, $css );
 }
 
-function assign_or_get_google_map_js( $flag_header=true )
+function assign_or_get_google_map_js( $flag_header=true, $api_key='' )
 {
 	$show = false ;
 	$js   = null ;
 
 	if ( $this->check_gmap_api() ) {
 		$show = true ;
-		$js   = $this->build_gmap_api();
+		$js   = $this->build_gmap_api('', $api_key);
 	}
 
 	if ( $flag_header && $this->_FLAG_ASSIGN_HEADER ) {
@@ -96,21 +96,21 @@ function assign_or_get_js( $key, $flag_header=true )
 //--------------------------------------------------------
 // google map js
 //--------------------------------------------------------
-function build_once_gmap_api( $langcode=null )
+function build_once_gmap_api( $langcode=null , $api_key='' )
 {
 	if ( $this->check_gmap_api() ) {
-		return $this->build_gmap_api( $langcode ) ;
+		return $this->build_gmap_api( $langcode , $api_key ) ;
 	}
 	return null;
 }
 
-function build_gmap_api( $langcode=null )
+function build_gmap_api( $langcode=null , $api_key='' )
 {
 	if ( empty($langcode) ) {
 		$langcode = _LANGCODE ;
 	}
 
-	$src = 'https://maps.google.com/maps/api/js?sensor=false&amp;language='. $langcode  ;
+	$src = 'https://maps.google.com/maps/api/js?v=3&amp;key='.$api_key.'&amp;sensor=false&amp;language='. $langcode  ;
 	$str = '<script src="'. $src .'" type="text/javascript" charset="utf-8"></script>'."\n";
 	return $str;
 }

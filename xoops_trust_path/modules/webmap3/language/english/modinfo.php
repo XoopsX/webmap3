@@ -48,7 +48,8 @@ define($constpref."CFG_MARKER_GICON" , "Icon of Marker" ) ;
 define($constpref."CFG_CONFIG_DSC" ,   "You can change in<br />[Latitude and Longitude Setting]");
 
 // map param
-define($constpref."CFG_MAP_TYPE_CONTROL",      "Use MapType");
+define($constpref."CFG_MAP_API_KEY",      "API Key of the Google Maps API");
+define($constpref."CFG_MAP_API_KEY_DSC",  "GoogleMapAPI Key is required when using GoogleMap. Please obtain key from the following URL.<br /><a href='https://developers.google.com/maps/documentation/javascript/tutorial'>https://developers.google.com/maps/documentation/javascript/tutorial</a>");define($constpref."CFG_MAP_TYPE_CONTROL",      "Use MapType");
 define($constpref."CFG_MAP_TYPE_CONTROL_DSC",  "mapTypeControl");
 define($constpref."CFG_MAP_TYPE_CONTROL_STYLE",      "Style of MapType");
 define($constpref."OPT_MAP_TYPE_CONTROL_STYLE_DSC",  "google.maps.MapTypeControlStyle");

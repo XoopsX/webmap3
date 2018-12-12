@@ -48,6 +48,8 @@ define($constpref."CFG_MARKER_GICON" , "マーカーのアイコン" ) ;
 define($constpref."CFG_CONFIG_DSC" ,   "[緯度・経度の設定] にて変更可能");
 
 // map param
+define($constpref."CFG_MAP_API_KEY",      "Google Maps API の APIキー");
+define($constpref."CFG_MAP_API_KEY_DSC",  "GoogleMapを使用する際にはGoogleMapAPI Keyが必要になります。下記URLからkeyを取得してください。<br /><a href='https://developers.google.com/maps/documentation/javascript/tutorial'>https://developers.google.com/maps/documentation/javascript/tutorial</a>");
 define($constpref."CFG_MAP_TYPE_CONTROL",      "地図形式を使用する");
 define($constpref."CFG_MAP_TYPE_CONTROL_DSC",  "mapTypeControl");
 define($constpref."CFG_MAP_TYPE_CONTROL_STYLE",      "地図形式のスタイル");
